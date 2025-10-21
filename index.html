@@ -80,12 +80,25 @@
       </blockquote>
       <p>— <cite>Alphonse Allais, 1893</cite></p>
       <p>The relationship between caffeine consumption and productivity has been documented since the discovery of coffee in 850 CE [1]. However, traditional models fail to explain the Afternoon Paradox — the phenomenon whereby productivity decreases inversely with coffee consumption after 2 PM.</p>
+
+      <!-- NEW: aside + abbr + dfn for terminology -->
+      <aside aria-label="Terminology note">
+        <p>
+          <abbr title="HyperText Markup Language">HTML</abbr> semantics:
+          <dfn>semantics</dfn> means using elements whose names convey their roles in the document structure.
+        </p>
+      </aside>
     </section>
 
     <section id="methods">
       <h2>2 Methods</h2>
 
       <h3>2.1 Quantum Coffee Preparation</h3>
+
+      <!-- NEW: del/ins to show a replaced step -->
+      <p><del>Grinding beans manually in the presence of a magnetic field.</del></p>
+      <p><ins>Automated grinding under cryogenic stabilization to preserve entanglement integrity.</ins></p>
+
       <ol>
         <li>Pre-treatment with coherent photon bombardment (λ = 632.8 nm)</li>
         <li>Grinding at 77 K to maintain quantum states</li>
@@ -119,6 +132,9 @@
       </figure>
     </section>
 
+    <!-- NEW: hr as a section break before Results -->
+    <hr>
+
     <section id="results">
       <h2>3 Results</h2>
 
@@ -126,7 +142,12 @@
       <table>
         <caption>Table 1: Productivity improvements by group</caption>
         <colgroup>
-          <col><col><col><col><col>
+          <!-- NEW: explicit <col> elements (allowed to tweak widths/spans if desired) -->
+          <col span="1">
+          <col span="1">
+          <col span="1">
+          <col span="1">
+          <col span="1">
         </colgroup>
         <thead>
           <tr>
@@ -187,9 +208,9 @@
     <section id="references">
       <h2>References</h2>
       <ol>
-        <li>Smith J. “A Brief History of Caffeine Addiction.” *J. Procrastination Studies* 42 (2020): 123-145.</li>
-        <li>Johnson K et al. “Quantum Superposition in Beverage Sciences.” *Phys. Rev. Coffee* 13 (2024): 456-478.</li>
-        <li>Chen L. “Temporal Mechanics of Office Productivity.” *Ann. Corporate Physics* 7 (2023): 89-101.</li>
+        <li>Smith J. “A Brief History of Caffeine Addiction.” <em>J. Procrastination Studies</em> 42 (2020): 123–145.</li>
+        <li>Johnson K et al. “Quantum Superposition in Beverage Sciences.” <em>Phys. Rev. Coffee</em> 13 (2024): 456–478.</li>
+        <li>Chen L. “Temporal Mechanics of Office Productivity.” <em>Ann. Corporate Physics</em> 7 (2023): 89–101.</li>
       </ol>
     </section>
 
