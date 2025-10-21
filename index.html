@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sample Page Replication</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <header>
+    <hgroup>
+      <h1>Article/Main Title</h1>
+      <p>Subtitle or tagline</p>
+    </hgroup>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#coffee">Favorite Coffee</a></li>
+        <li><a href="#keywords">Coolest Keywords</a></li>
+        <li><a href="#qed">QED-3000</a></li>
+        <li><a href="#table">Table 1</a></li>
+      </ul>
+    </nav>
+
+    <!-- Simple SVG logo/shape; attributes allowed on the element -->
+    <svg width="120" height="60" viewBox="0 0 120 60" role="img" aria-label="Sample SVG">
+      <rect x="1" y="1" width="118" height="58" fill="white" stroke="black" opacity="0.9"/>
+      <circle cx="60" cy="30" r="18" fill="black"/>
+    </svg>
+  </header>
+
+  <main id="intro">
+    <article>
+      <header>
+        <h2>Intro Section</h2>
+        <p><abbr title="HyperText Markup Language">HTML</abbr> semantics in action. 
+           Here <dfn>semantics</dfn> means “using meaningful tags.”</p>
+      </header>
+
+      <p>Use content from <code>raw_text.txt</code>. For inline code, use <code>code</code>;
+         for multi-line examples, use <kbd>Cmd</kbd>+<kbd>C</kbd> in a <code>pre</code> block:</p>
+
+      <pre>
+$ echo "example"
+$ ./run --flag
+      </pre>
+
+      <blockquote cite="https://example.com/source-article">
+        “A relevant pull-quote copied from the PDF text.”
+      </blockquote>
+      <p>— <cite>Source Article or Author</cite></p>
+
+      <hr>
+
+      <section id="figure">
+        <h3>Figure 1</h3>
+        <figure>
+          <img src="starbucks.jpg" alt="Coffee shop scene" width="400" height="300">
+          <figcaption>Figure 1: An illustrative image and caption.</figcaption>
+        </figure>
+      </section>
+
+      <aside aria-label="Side note">
+        <p>This is a related note that complements the main content.</p>
+        <address>
+          Contact: <a href="mailto:someone@example.com">someone@example.com</a><br>
+          9500 Gilman Dr, La Jolla, CA 92093
+        </address>
+      </aside>
+
+      <section id="coffee">
+        <h3>Favorite Coffee</h3>
+        <p>Select your coffee type(s):</p>
+        <form>
+          <label for="coffee-select">Choose one:</label>
+          <select id="coffee-select" name="coffee">
+            <optgroup label="Common">
+              <option>Espresso</option>
+              <option>Americano</option>
+              <option>Latte</option>
+              <option>Cappuccino</option>
+            </optgroup>
+            <optgroup label="Niche or Rare">
+              <option>Gesha</option>
+              <option>Peaberry</option>
+              <option>Monsooned Malabar</option>
+            </optgroup>
+          </select>
+        </form>
+      </section>
+
+      <section id="keywords">
+        <h3>Coolest-sounding keyword (type or choose)</h3>
+        <form>
+          <label for="kw">Keyword:</label>
+          <input id="kw" name="kw" list="kw-list" placeholder="type or choose">
+          <datalist id="kw-list">
+            <option value="shadow DOM">
+            <option value="declarative shadow roots">
+            <option value="ARIA">
+            <option value="custom elements">
+          </datalist>
+        </form>
+      </section>
+
+      <section id="qed">
+        <h3>QED-3000 technical specs &amp; example commands</h3>
+        <details>
+          <summary>Show specs & usage</summary>
+          <dl>
+            <dt>CPU</dt><dd>8-core @ 3.2 GHz</dd>
+            <dt>RAM</dt><dd>32 GB</dd>
+            <dt>Storage</dt><dd>1 TB NVMe</dd>
+          </dl>
+
+          <p>Commands:</p>
+          <pre>
+qed init
+qed run --mode=prod
+          </pre>
+        </details>
+      </section>
+
+      <section id="table" aria-labelledby="table-caption">
+        <h3>Table 1: Productivity improvements by group</h3>
+        <table>
+          <caption id="table-caption">Productivity improvements by group</caption>
+
+          <!-- Use colgroup/col and span to shape widths (allowed) -->
+          <colgroup>
+            <col span="1">
+            <col span="1">
+            <col span="1">
+          </colgroup>
+
+          <thead>
+            <tr>
+              <th scope="col">Group</th>
+              <th scope="col">Before</th>
+              <th scope="col">After</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Control</th>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th scope="row">Experiment A</th>
+              <td>60%</td>
+              <td><ins>75%</ins></td>
+            </tr>
+            <tr>
+              <th scope="row">Experiment B</th>
+              <td><del>45%</del></td>
+              <td>70%</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Average</th>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section id="search">
+        <h3>Search</h3>
+        <form role="search">
+          <label for="q">Search this page:</label>
+          <input id="q" name="q" type="search" placeholder="Search terms">
+          <button type="submit">Search</button>
+        </form>
+        <p><small>(Form doesn’t need to function.)</small></p>
+      </section>
+
+      <section id="notes">
+        <h3>Details & summary section</h3>
+        <details>
+          <summary>Read more notes</summary>
+          <p>Extra explanatory text.</p>
+        </details>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
+
+</body>
+</html>
